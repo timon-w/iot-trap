@@ -1,14 +1,14 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 
-const char* ssid = "FRITZ!Box Fon WLAN 7360";
+const char* ssid = "xxxx";
 const char* password = "xxxx";
 const char* Host = "hooks.slack.com";
-const String SlackHookUrl = "/services/xxx";
+const String SlackHookUrl = "/services/xxxx";
 const String SlackIcon = ":rat:";
-const String SlackMessageSet = "@timon, your trap is set :slightly_smiling_face:";
-const String SlackMessageOff = "@timon, your trap has gone off :skull_and_crossbones:";
-const String SlackUsername = "iot-trap";
+const String SlackMessageSet = "@xxxx, your trap is set :slightly_smiling_face:";
+const String SlackMessageOff = "@xxxx, your trap has gone off :skull_and_crossbones:";
+const String SlackUsername = "xxxx";
 const int httpsPort = 443;
 const int TripWire = 5;
 int StateChange = false;
