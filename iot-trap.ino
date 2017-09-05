@@ -11,6 +11,7 @@ const String SlackMessageOff = "@xxxx, your trap has gone off :skull_and_crossbo
 const String SlackUsername = "xxxx";
 const int httpsPort = 443;
 const int TripWire = 5;
+const int SleepTimeSeconds = 1800;
 int StateChange = false;
 
 void setup() {
@@ -20,11 +21,6 @@ void setup() {
 
     // Wait for serial to initialize.
     while (!Serial) { }
-
-    Serial.println("Device Started");
-    Serial.println("-------------------------------------");
-    Serial.println("Running Deep Sleep Firmware!");
-    Serial.println("-------------------------------------");
 
     // read the input pin:
     int TrapState = digitalRead(TripWire);
@@ -45,7 +41,7 @@ void setup() {
     }
     
     Serial.println("Going into deep sleep for 20 seconds");
-    ESP.deepSleep(20e6); // 20e6 is 20 microseconds
+    ESP.deepSleep(SleepTimeSeconds * 1000000); // 20e6 is 20 microseconds
 }
 
 void loop() {
