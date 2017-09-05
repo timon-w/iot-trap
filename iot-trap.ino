@@ -40,8 +40,8 @@ void setup() {
         Serial.println("Trap has been set");
     }
     
-    Serial.println("Going into deep sleep for 20 seconds");
-    ESP.deepSleep(SleepTimeSeconds * 1000000); // 20e6 is 20 microseconds
+    Serial.println("Going into deep sleep");
+    ESP.deepSleep(SleepTimeSeconds * 1000000);
 }
 
 void loop() {
